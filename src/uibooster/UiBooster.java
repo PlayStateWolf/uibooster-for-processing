@@ -231,6 +231,16 @@ public class UiBooster {
     public File showFileSelection() {
         return FilesystemDialog.showFileSelectionDialog();
     }
+    
+   /**
+     * Shows a file selection dialog starting from a specific directory path. Only files are shown and selectable
+     *
+     * @param path full directory path for opening the dialog box in
+     * @return returns the selection file or null on cancel
+     */
+    public File showFileSelectionFromPath(String path) {
+        return FilesystemDialog.showFileSelectionDialogFromPath(path);
+    }
 
     /**
      * Shows a file selection dialog. Only files are shown and selectable
@@ -242,6 +252,18 @@ public class UiBooster {
     public File showFileSelection(String description, String... extensions) {
         return FilesystemDialog.showFileSelectionDialog(description, extensions);
     }
+    
+    /**
+     * Shows a file selection dialog starting from a specific directory path. Only files are shown and selectable
+     *
+     * @param path full directory path for opening the dialog box in
+     * @param description expects a short and readable description for the extensions
+     * @param extensions  expects one or more allowed extensions without the dot (f.e. bmp, png, pdf)
+     * @return returns the selection file or null on cancel
+     */
+    public File showFileSelectionFromPath(String path, String description, String... extensions) {
+        return FilesystemDialog.showFileSelectionDialogFromPath(path, description, extensions);
+    }
 
     /**
      * Shows a directory selection dialog. Only directories are shown and selectable
@@ -251,6 +273,16 @@ public class UiBooster {
     public File showDirectorySelection() {
         return FilesystemDialog.showDirectorySelectionDialog();
     }
+    
+    /**
+     * Shows a directory selection dialog starting from a specific directory path. Only directories are shown and selectable
+     *
+     * @param path full directory path for opening the dialog box in
+     * @return returns the selection directory or null on cancel
+     */
+    public File showDirectorySelectionFromPath(String path) {
+        return FilesystemDialog.showDirectorySelectionDialogFromPath(path);
+    }
 
     /**
      * Shows a selection dialog for files and directories.
@@ -259,6 +291,16 @@ public class UiBooster {
      */
     public File showFileOrDirectorySelection() {
         return FilesystemDialog.showFileOrDirectorySelectionDialog();
+    }
+    
+    /**
+     * Shows a selection dialog for files and directories starting from a specific directory path.
+     *
+     * @param path full directory path for opening the dialog box in
+     * @return returns the selection or null on cancel
+     */
+    public File showFileOrDirectorySelectionFromPath(String path) {
+        return FilesystemDialog.showFileOrDirectorySelectionDialogFromPath(path);
     }
 
     /**
@@ -270,6 +312,18 @@ public class UiBooster {
      */
     public File showFileOrDirectorySelection(String description, String... extensions) {
         return FilesystemDialog.showFileOrDirectorySelectionDialog(description, extensions);
+    }
+    
+    /**
+     * Shows a selection dialog for files and directories starting from a specific directory path.
+     *
+     * @param path full directory path for opening the dialog box in
+     * @param description expects a short and readable description for the extensions
+     * @param extensions  expects one or more allowed extensions without the dot (f.e. bmp, png, pdf)
+     * @return returns the selection or null on cancel
+     */
+    public File showFileOrDirectorySelectionFromPath(String path, String description, String... extensions) {
+        return FilesystemDialog.showFileOrDirectorySelectionDialogFromPath(path, description, extensions);
     }
 
     /**
